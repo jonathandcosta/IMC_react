@@ -15,7 +15,16 @@ const Formulario = () => {
     const totalPeso = peso;
     const IMC = totalPeso / alturaQuadrado;
 
-    if (IMC <= 25) {
+    //qualificações;
+    //abaixo de 17 = muito abaixo do peso
+    //entre 17 e 18,5 = abaixo do peso
+    // entre 18,5 e 24,9 = peso normal
+    // entre 25 e 29,9 = acima do peso
+    // entre 30 e 34,9 = obesidade I
+    // entre 35 e 39,9 = obesidade II severa
+    // acima de 40 = obesidade III morbida
+
+    if ((IMC <= 24, 9)) {
       return (
         <p>
           {nome} você está com o seu peso NORMAL ou um pouco abaixo do ideal,
