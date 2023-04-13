@@ -13,3 +13,13 @@
 .perfil-titulo {
   font-family: sans-serif;
 }
+h5,
+h6 {
+  font-family: monospace;
+}
+h5 {
+  font-family: 16px;
+}
+h6 {
+  font-size: 14px;
+}

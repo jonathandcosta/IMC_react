@@ -9,7 +9,8 @@ const Perfil = ({ endereco, nome }) => {
         alt="imagem do perfil do github"
       />
       <h3 className="perfil-titulo">{nome}</h3>
-      <h6>O seu Developer_Nutri</h6>
+      <h5>O seu Developer_"Nutri"</h5>
+      <h6>Calcule o seu Indice de Massa Corporal</h6>
     </div>
   );
 };

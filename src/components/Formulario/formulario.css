@@ -6,16 +6,40 @@
 .name {
   display: flex;
   border-radius: 8px;
-  width: 320px;
+  width: 360px;
   margin: 0 auto;
   padding: 4px;
   border: solid 4px blueviolet;
+  font-size: 16px;
 }
 .dados {
   width: 120px;
   height: 20px;
   border-radius: 8px;
   text-align: center;
-  margin: 16px;
+  margin: 16px 0px 16px 6px;
   border: solid 4px blueviolet;
+  font-size: 12px;
+}
+.resposta {
+  display: none;
+}
+button {
+  padding: 4px;
+  margin-left: 20px;
+  border-radius: 8px;
+  border: solid 4px blueviolet;
+  font-size: 12px;
+  font-weight: bold;
+  color: blueviolet;
+  background-color: #fff;
+}
+h1 {
+  font-family: monospace;
+  font-size: 14px;
+  max-width: 730px;
+  margin: 0 auto;
+}
+h1:first-letter {
+  text-transform: capitalize;
 }
