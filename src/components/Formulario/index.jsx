@@ -8,7 +8,7 @@ const Formulario = () => {
   let [resposta, setResposta] = useState(null);
 
   const values = [
-    { value: 17, mensagem: "muito acima do peso" },
+    { value: 17, mensagem: "muito abaixo do peso" },
     { value: 18.5, mensagem: "abaixo do peso" },
     { value: 24.9, mensagem: "peso normal" },
     { value: 29.9, mensagem: "acima do peso" },
@@ -18,6 +18,7 @@ const Formulario = () => {
   ];
 
   let indice = 0;
+  let lastindice = values.length - 1;
 
   const alteraNome = (evento) => {
     setNome(evento.target.value);
@@ -29,7 +30,11 @@ const Formulario = () => {
     const IMC = totalPeso / alturaQuadrado;
 
     for (let i = 0; i < 7; i++) {
-      if (IMC >= values[i].value && IMC < values[i + 1].value) {
+      if (IMC <= values[0].value) break;
+      else if (IMC >= values[lastindice].value) {
+        indice = lastindice;
+        break;
+      } else if (IMC >= values[i].value && IMC < values[i + 1].value) {
         indice = i;
         break;
       }
@@ -65,11 +70,13 @@ const Formulario = () => {
       {<button onClick={apresentaResultado}>Calcular</button>}
       {resposta ? (
         <h1>
-          {nome}, de acordo com o cálculo do seu Índice de Massa Corporal, o seu
-          resultado significa que sua proporção de peso para altura indica que
-          você está {resposta}. <br /> <br /> É importante lembrar que o IMC é
-          apenas uma ferramenta de avaliação e deve ser interpretado em conjunto
-          com outros fatores de saúde, como idade, sexo e histórico médico.
+          {nome}, de acordo com o cálculo do <span>I</span>ndice de{" "}
+          <span>M</span>assa <span>C</span>orporal, o resultado significa que
+          sua proporção de peso para altura indica que você está{" "}
+          <span>{resposta}</span>. <br /> <br /> É importante lembrar que o IMC
+          é apenas uma ferramenta de avaliação e deve ser interpretado em
+          conjunto com outros fatores de saúde, como idade, sexo e histórico
+          médico.
         </h1>
       ) : null}
     </form>

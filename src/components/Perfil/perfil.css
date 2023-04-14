@@ -12,13 +12,16 @@
 
 .perfil-titulo {
   font-family: sans-serif;
+  margin-bottom: 10px;
 }
 h5,
 h6 {
   font-family: monospace;
 }
 h5 {
-  font-family: 16px;
+  font-size: 16px;
+  color: blueviolet;
+  margin-top: 0px;
 }
 h6 {
   font-size: 14px;
