@@ -52,6 +52,7 @@ const Formulario = () => {
         required
         onChange={alteraNome}
       />
+
       <input
         className="dados"
         type="number"
@@ -66,6 +67,11 @@ const Formulario = () => {
         required
         onChange={(evento) => setPeso(parseInt(evento.target.value))}
       />
+      <div>
+        <span className="obs">
+          Obs.: Digite a sua altura/peso usando " . " ou " , ".
+        </span>
+      </div>
       <input className="resposta" type="text" value={resposta} />
       {<button onClick={apresentaResultado}>Calcular</button>}
       {resposta ? (

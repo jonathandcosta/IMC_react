@@ -10,23 +10,27 @@
   margin: 0 auto;
   padding: 4px;
   border: solid 4px blueviolet;
-  font-size: 16px;
+  font-size: 15px;
+}
+.obs {
+  font-size: 12px;
+  color: #ccc9c9;
 }
 .dados {
   width: 120px;
   height: 20px;
   border-radius: 8px;
   text-align: center;
-  margin: 16px 0px 16px 6px;
+  margin: 16px 0px 0px 6px;
   border: solid 4px blueviolet;
-  font-size: 15px;
+  font-size: 14px;
 }
 .resposta {
   display: none;
 }
 button {
   padding: 4px;
-  margin-left: 20px;
+  margin: 16px 0px 16px 6px;
   border-radius: 8px;
   border: solid 4px blueviolet;
   font-size: 12px;
